@@ -63,8 +63,8 @@ header {
     display: flex;
     align-items: center;
     gap: 14px;
-    text-decoration: none; /* Remove sublinhado */
-    color: inherit;        /* Mantém a cor original do texto */
+    text-decoration: none;
+    color: inherit;
 }
 
 .logo-container img {
@@ -121,39 +121,84 @@ main {
     box-sizing: border-box;
 }
 
-/* Caixa Grande em Destaque (Ocupa a Ladeira Superior Completa) */
+/* Caixa Grande do Projeto */
 .caixa-destaque {
-    flex: 1 1 100%; /* Força ocupar 100% da largura do display */
-    padding: 45px 40px;
+    flex: 1 1 100%;
+    padding: 40px;
     background: rgba(255, 255, 255, 0.95);
     backdrop-filter: blur(16px);
     border-radius: var(--radius-lg);
     border: 2px solid rgba(255, 255, 255, 0.8);
     box-shadow: 0 15px 35px rgba(0, 0, 0, 0.35);
     transition: transform var(--transition-smooth), box-shadow var(--transition-smooth), border-color var(--transition-smooth);
+    box-sizing: border-box;
 }
 
 .caixa-destaque:hover {
-    transform: translateY(-5px) scale(1.01);
-    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5), 0 0 25px var(--primary-glow);
+    transform: translateY(-4px) scale(1.005);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.45), 0 0 25px var(--primary-glow);
     border-color: var(--primary-color);
 }
 
+.projeto-header {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 20px;
+    border-bottom: 2px solid rgba(0, 120, 212, 0.15);
+    padding-bottom: 15px;
+}
+
+.logo-bloco-projeto {
+    width: 60px;
+    height: auto;
+    filter: drop-shadow(0 4px 8px rgba(0, 120, 212, 0.25));
+}
+
 .caixa-destaque h2 {
-    font-size: 2.2rem;
+    font-size: 2.1rem;
     font-weight: 800;
-    margin-top: 0;
-    margin-bottom: 16px;
+    margin: 0;
     color: var(--primary-color);
     letter-spacing: -0.5px;
 }
 
-.caixa-destaque p {
-    font-size: 1.2rem;
+.projeto-conteudo p {
+    font-size: 1.1rem;
     line-height: 1.7;
     color: var(--text-primary);
-    margin-bottom: 24px;
-    max-width: 95%;
+    margin-bottom: 16px;
+}
+
+/* Caixa de Créditos das Professoras */
+.equipe-creditos {
+    margin-top: 25px;
+    padding: 20px;
+    background-color: rgba(0, 120, 212, 0.05);
+    border-left: 4px solid var(--primary-color);
+    border-radius: var(--radius-sm);
+}
+
+.equipe-creditos h3 {
+    margin-top: 0;
+    margin-bottom: 12px;
+    color: var(--primary-color);
+    font-size: 1.15rem;
+}
+
+.equipe-creditos ul {
+    margin: 0;
+    padding-left: 20px;
+}
+
+.equipe-creditos li {
+    margin-bottom: 8px;
+    color: var(--text-primary);
+    font-size: 1rem;
+}
+
+.equipe-creditos li:last-child {
+    margin-bottom: 0;
 }
 
 /* Seções Menores e Barra Lateral */
@@ -177,6 +222,7 @@ section, article, aside {
     border: 1px solid var(--card-border);
     box-shadow: var(--card-shadow);
     transition: transform var(--transition-smooth), box-shadow var(--transition-smooth), border-color var(--transition-smooth);
+    box-sizing: border-box;
 }
 
 section:hover, article:hover, aside:hover {
@@ -231,7 +277,7 @@ input[type="text"]:focus {
     box-shadow: 0 0 0 3px var(--primary-glow);
 }
 
-/* Botões */
+/* Botões com proteção de tamanho para Mobile */
 button, .btn-link {
     display: inline-flex;
     align-items: center;
@@ -247,6 +293,8 @@ button, .btn-link {
     text-decoration: none;
     box-shadow: 0 4px 12px rgba(0, 120, 212, 0.35);
     transition: all var(--transition-fast);
+    box-sizing: border-box;
+    max-width: 100%;
 }
 
 button:hover, .btn-link:hover {
@@ -323,11 +371,20 @@ footer {
         padding: 25px 20px;
     }
 
-    .caixa-destaque h2 {
-        font-size: 1.6rem;
+    .projeto-header {
+        flex-direction: row;
+        gap: 14px;
     }
 
-    .caixa-destaque p {
+    .logo-bloco-projeto {
+        width: 48px;
+    }
+
+    .caixa-destaque h2 {
+        font-size: 1.5rem;
+    }
+
+    .projeto-conteudo p {
         font-size: 1rem;
     }
 

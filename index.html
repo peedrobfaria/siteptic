@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Painel de Controle</title>
+    <title>Painel de Controle | Sistema NFC</title>
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
 </head>
@@ -15,29 +15,31 @@
         </a>
         <nav>
             <ul>
-                <li><a href="index.html">Início</a></li>
+                <li><a href="index.html" class="active">Início</a></li>
                 <li><a href="cadastro-nfc.html">Atribuição NFC</a></li>
-                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="sobre.html">Sobre</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
-        <!-- Caixa Grande em Destaque Principal -->
-        <section id="nosso-projeto" class="caixa-destaque">
-            <h2>Qual o nosso projeto?</h2>
-            <p>A nossa intenção com esse projeto é de facilitar a marcação de presença na aula para os professores, previnir perda de pen-drives e evitar que alunos "matem aula" dentro da unidade escolar.</p>
-            <a href="cadastro-nfc.html" class="btn-link">Acessar Cadastro de NFC</a>
-        </section>
-
-        <!-- Seção de Conteúdo e Barra Lateral abaixo do destaque -->
         <div class="conteudo-principal">
-            <section id="sobre">
+            <section id="home">
+                <h2>Bem-vindo ao Painel de Controle</h2>
+                <p>Plataforma centralizada para gestão de credenciais físicas NFC e integração com dispositivos de chamada.</p>
+                
+                <div class="actions">
+                    <a href="cadastro-nfc.html" class="btn-link">Ir para Atribuição NFC</a>
+                    <a href="sobre.html" class="btn-link" style="background-color: #323130;">Conhecer o Projeto</a>
+                </div>
+            </section>
+
+            <section id="atualizacoes">
                 <h2>Últimas Atualizações</h2>
                 <article>
                     <h3>Sistema Inicializado e Responsivo</h3>
                     <p>Publicado em <time datetime="2026-10-27">27 de Out de 2026</time></p>
-                    <p>Interface atualizada para suportar dispositivos móveis com novo design em gradiente.</p>
+                    <p>Estrutura do site dividida em páginas independentes, com design fluido adaptado para dispositivos móveis.</p>
                 </article>
             </section>
         </div>
