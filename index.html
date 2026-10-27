@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel de Controle</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <a href="index.html" class="logo-container">
+            <img src="logo.png" alt="Logo do Sistema" id="site-logo">
+            <h1>Sistema NFC</h1>
+        </a>
+        <nav>
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="cadastro-nfc.html">Atribuição NFC</a></li>
+                <li><a href="#sobre">Sobre</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Caixa Grande em Destaque Principal -->
+        <section id="nosso-projeto" class="caixa-destaque">
+            <h2>Qual o nosso projeto?</h2>
+            <p>A nossa intenção com esse projeto é de facilitar a marcação de presença na aula para os professores, previnir perda de pen-drives e evitar que alunos "matem aula" dentro da unidade escolar.</p>
+            <a href="cadastro-nfc.html" class="btn-link">Acessar Cadastro de NFC</a>
+        </section>
+
+        <!-- Seção de Conteúdo e Barra Lateral abaixo do destaque -->
+        <div class="conteudo-principal">
+            <section id="sobre">
+                <h2>Últimas Atualizações</h2>
+                <article>
+                    <h3>Sistema Inicializado e Responsivo</h3>
+                    <p>Publicado em <time datetime="2026-10-27">27 de Out de 2026</time></p>
+                    <p>Interface atualizada para suportar dispositivos móveis com novo design em gradiente.</p>
+                </article>
+            </section>
+        </div>
+
+        <aside>
+            <h3>Painel de Ações</h3>
+            <p>Conectividade com banco de dados pendente.</p>
+            <ul>
+                <li>Status Servidor: <span style="color:#a4262c; font-weight:bold;">Offline</span></li>
+                <li>Status Arduino: <span style="color:#a4262c; font-weight:bold;">Desconectado</span></li>
+            </ul>
+        </aside>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Meu Site. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>

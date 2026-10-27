@@ -1,0 +1,337 @@
+/* ==========================================================================
+   Estilo Profissional - Microsoft Fluent / Xbox Design System
+   ========================================================================== */
+
+:root {
+    --primary-color: #0078D4;        /* Azul Microsoft */
+    --primary-hover: #106EBE;
+    --primary-glow: rgba(0, 120, 212, 0.35);
+    
+    --bg-gradient: linear-gradient(180deg, #0b132b 0%, #005a9e 45%, #050811 100%);
+    
+    --card-bg: rgba(255, 255, 255, 0.92);
+    --card-border: rgba(255, 255, 255, 0.6);
+    --card-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.3), 0 0 1px rgba(255, 255, 255, 0.5) inset;
+    --hover-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.5), 0 0 20px var(--primary-glow);
+    
+    --text-primary: #1b1a19;
+    --text-secondary: #484644;
+    
+    --radius-sm: 6px;
+    --radius-md: 12px;
+    --radius-lg: 16px;
+    
+    --transition-fast: 0.2s cubic-bezier(0.1, 0.9, 0.2, 1);
+    --transition-smooth: 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+html {
+    height: 100%;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
+    background: var(--bg-gradient);
+    background-attachment: fixed;
+    color: var(--text-primary);
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Cabeçalho Acrílico */
+header {
+    background: rgba(255, 255, 255, 0.88);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    padding: 16px 40px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    text-decoration: none; /* Remove sublinhado */
+    color: inherit;        /* Mantém a cor original do texto */
+}
+
+.logo-container img {
+    width: 44px;
+    height: auto;
+    filter: drop-shadow(0 2px 6px rgba(0, 120, 212, 0.3));
+    transition: transform var(--transition-smooth);
+}
+
+.logo-container:hover img {
+    transform: scale(1.08) rotate(-3deg);
+}
+
+.logo-container h1 {
+    font-size: 1.35rem;
+    font-weight: 700;
+    margin: 0;
+    color: var(--text-primary);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 12px;
+    margin: 0;
+    padding: 0;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--text-secondary);
+    font-weight: 600;
+    font-size: 0.95rem;
+    padding: 8px 16px;
+    border-radius: var(--radius-sm);
+    transition: all var(--transition-fast);
+}
+
+nav a:hover {
+    color: var(--primary-color);
+    background-color: rgba(0, 120, 212, 0.08);
+}
+
+/* Layout Principal */
+main {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex: 1;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Caixa Grande em Destaque (Ocupa a Ladeira Superior Completa) */
+.caixa-destaque {
+    flex: 1 1 100%; /* Força ocupar 100% da largura do display */
+    padding: 45px 40px;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(16px);
+    border-radius: var(--radius-lg);
+    border: 2px solid rgba(255, 255, 255, 0.8);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.35);
+    transition: transform var(--transition-smooth), box-shadow var(--transition-smooth), border-color var(--transition-smooth);
+}
+
+.caixa-destaque:hover {
+    transform: translateY(-5px) scale(1.01);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5), 0 0 25px var(--primary-glow);
+    border-color: var(--primary-color);
+}
+
+.caixa-destaque h2 {
+    font-size: 2.2rem;
+    font-weight: 800;
+    margin-top: 0;
+    margin-bottom: 16px;
+    color: var(--primary-color);
+    letter-spacing: -0.5px;
+}
+
+.caixa-destaque p {
+    font-size: 1.2rem;
+    line-height: 1.7;
+    color: var(--text-primary);
+    margin-bottom: 24px;
+    max-width: 95%;
+}
+
+/* Seções Menores e Barra Lateral */
+.conteudo-principal {
+    flex: 3;
+    min-width: 300px;
+}
+
+aside {
+    flex: 1;
+    min-width: 280px;
+}
+
+section, article, aside {
+    background: var(--card-bg);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    padding: 28px;
+    margin-bottom: 24px;
+    border-radius: var(--radius-md);
+    border: 1px solid var(--card-border);
+    box-shadow: var(--card-shadow);
+    transition: transform var(--transition-smooth), box-shadow var(--transition-smooth), border-color var(--transition-smooth);
+}
+
+section:hover, article:hover, aside:hover {
+    transform: translateY(-4px) scale(1.015);
+    box-shadow: var(--hover-shadow);
+    border-color: var(--primary-color);
+}
+
+h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-top: 0;
+    margin-bottom: 12px;
+}
+
+h3 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+p {
+    margin-top: 0;
+    color: var(--text-secondary);
+}
+
+/* Form e Inputs */
+label {
+    font-weight: 600;
+    font-size: 0.9rem;
+    display: block;
+    margin-top: 18px;
+    margin-bottom: 6px;
+}
+
+input[type="text"] {
+    padding: 12px 16px;
+    width: 100%;
+    font-size: 0.98rem;
+    background-color: rgba(255, 255, 255, 0.85);
+    border: 1.5px solid #d1d1d1;
+    border-radius: var(--radius-sm);
+    font-family: inherit;
+    box-sizing: border-box;
+    transition: all var(--transition-fast);
+}
+
+input[type="text"]:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px var(--primary-glow);
+}
+
+/* Botões */
+button, .btn-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--primary-color);
+    color: #ffffff;
+    border: none;
+    padding: 14px 28px;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+    text-decoration: none;
+    box-shadow: 0 4px 12px rgba(0, 120, 212, 0.35);
+    transition: all var(--transition-fast);
+}
+
+button:hover, .btn-link:hover {
+    background-color: var(--primary-hover);
+    box-shadow: 0 6px 18px rgba(0, 120, 212, 0.5);
+    transform: translateY(-2px);
+}
+
+button:active, .btn-link:active {
+    transform: scale(0.97);
+}
+
+.actions {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+/* Status NFC */
+#nfc-status {
+    margin-top: 20px;
+    padding: 14px 20px;
+    border-radius: var(--radius-sm);
+    font-weight: 600;
+    display: none;
+    text-align: center;
+}
+
+.status-success { background-color: #dff6dd; color: #107c10; border: 1px solid rgba(16, 124, 16, 0.3); }
+.status-error { background-color: #fde7e9; color: #a4262c; border: 1px solid rgba(164, 38, 44, 0.3); }
+
+/* Barra Lateral */
+aside ul {
+    padding-left: 0;
+    list-style: none;
+}
+
+aside li {
+    padding: 8px 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+/* Rodapé */
+footer {
+    background: rgba(10, 12, 18, 0.95);
+    color: rgba(255, 255, 255, 0.7);
+    text-align: center;
+    padding: 24px;
+    margin-top: auto;
+    font-size: 0.88rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Responsividade Mobile */
+@media (max-width: 868px) {
+    header {
+        flex-direction: column;
+        padding: 16px 20px;
+        gap: 14px;
+    }
+
+    nav ul {
+        width: 100%;
+        justify-content: center;
+        gap: 8px;
+    }
+
+    main {
+        flex-direction: column;
+        padding: 20px 15px;
+    }
+
+    .caixa-destaque {
+        padding: 25px 20px;
+    }
+
+    .caixa-destaque h2 {
+        font-size: 1.6rem;
+    }
+
+    .caixa-destaque p {
+        font-size: 1rem;
+    }
+
+    button, .btn-link {
+        width: 100%;
+    }
+}

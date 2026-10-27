@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro NFC</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <a href="index.html" class="logo-container">
+            <img src="logo.png" alt="Logo do Sistema" id="site-logo">
+            <h1>Sistema NFC</h1>
+        </a>
+        <nav>
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="cadastro-nfc.html">Atribuição NFC</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="conteudo-principal" style="flex: 1; width: 100%;">
+            <section id="nfc-panel">
+                <h2>Leitura e Atribuição de Chave NFC</h2>
+                <p>Insira o nome do usuário e aproxime o cartão NFC/RFID para vincular ao sistema.</p>
+                
+                <label for="username">Nome do Usuário:</label>
+                <input type="text" id="username" placeholder="Ex: João da Silva">
+                
+                <label for="nfc-serial">Número de Série da Chave (Serial):</label>
+                <input type="text" id="nfc-serial" placeholder="Aguardando leitura..." readonly>
+
+                <div class="actions">
+                    <button id="btn-scan">Ler Cartão NFC</button>
+                    <button id="btn-assign" style="background-color: #107c10; display: none;">Atribuir ao Usuário</button>
+                </div>
+
+                <div id="nfc-status"></div>
+            </section>
+        </div>
+    </main>
+
+    <footer style="margin-top: auto;">
+        <p>&copy; 2026 Meu Site. Módulo de Cadastro NFC.</p>
+    </footer>
+</body>
+</html>
